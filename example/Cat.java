@@ -3,6 +3,7 @@ package example;
 public class Cat {
     // フィールドの定義　クラスのブロック内で定義
     String name;
+    int age;
     boolean hungry;
 
     // ご飯を食べるメソッドを定義
@@ -24,5 +25,29 @@ public class Cat {
         System.out.println(name + "> " + toy + "で遊ぶよ。楽しいにゃー");
         System.out.println(name + "> 遊んでお腹が減ったにゃー");
         hungry = true;
+    }
+// nameフィールドのセッターを追加　セッターはフィールドに値を設定するメソッド
+    void setName(String catName) {
+        name = catName;
+    }
+
+    // nameフィールドのゲッターを追加 ゲッターはフィールドの値を戻り値で返すメソッド
+    String getName() {
+        return name;
+    }
+
+    void setAge(int catAge) {
+        age = catAge;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    void introduceMyself() {
+        // getNameメソッドを呼び出す
+        String n = getName();
+        int a = getAge();
+        System.out.println("名前は" + n + "です、" + a + "歳です。");
     }
 }
